@@ -14,18 +14,11 @@ public class logfile {
 
 	public logfile(String string) {
 		opType = string;
+		BasicConfigurator.configure();
+		logger.info("jjj");
 	}
 
 	public String toString() {
 		return "time : " + timeStamp + ", user: " + username + " ,Operation: " + opType;
-	}
-
-	public static void main(String[] args) {
-		logfile lf = new logfile(OperationType.TURN_ON);
-		BasicConfigurator.configure();
-
-		if (logger.isInfoEnabled()) {
-			logger.info(lf);
-		}
 	}
 }
