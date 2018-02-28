@@ -35,7 +35,6 @@ public class inputStreamContentComparison {
 	 */
 
 	public String hashFileStream(InputStream stream) {
-
 		if (sha256 == null) {
 			try {
 				sha256 = MessageDigest.getInstance("SHA-256");
