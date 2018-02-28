@@ -8,17 +8,21 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
+/* compare the content of 2 files*/
+
 public class contentComparison {
 
 	static MessageDigest sha256 = null;
 	public FileInputStream file1 = null;
 	public FileInputStream file2 = null;
 
+	/* calling for class constructor - must take 2 FileInputStream files as input */
 	public contentComparison(FileInputStream in1, FileInputStream in2) {
 		file1 = in1;
 		file2 = in2;
 	}
 
+	/* check if 2 input files have the same SHA2-256 digest on file contents */
 	public boolean compare2files() {
 		return hashFileStream(file1) == hashFileStream(file2);
 	}
