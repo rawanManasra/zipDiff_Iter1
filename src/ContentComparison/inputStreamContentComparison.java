@@ -1,4 +1,4 @@
-package ContentCoparison;
+package ContentComparison;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,7 +22,7 @@ public class inputStreamContentComparison {
 
 	/* check if 2 input files have the same SHA2-256 digest on file contents */
 	public boolean compare2files() throws IOException {
-		return hashFileStream(file1) == hashFileStream(file2);
+		return hashFileStream(file1).equals(hashFileStream(file2));
 	}
 
 	/**
@@ -34,7 +34,7 @@ public class inputStreamContentComparison {
 	 *         (not URL safe). Returns null if the hash digest fails.
 	 */
 
-	public static String hashFileStream(InputStream stream) {
+	public String hashFileStream(InputStream stream) {
 
 		if (sha256 == null) {
 			try {

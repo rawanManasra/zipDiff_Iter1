@@ -1,4 +1,4 @@
-package ContentCoparison;
+package ContentComparison;
 
 import java.util.zip.ZipEntry;
 
