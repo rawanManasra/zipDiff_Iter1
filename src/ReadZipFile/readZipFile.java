@@ -16,21 +16,19 @@ public class readZipFile {
 	// Expands the zip file passed as argument 1, into the
 	// directory provided in argument 2
 	public static void main(String args[]) throws Exception {
-		if (args.length != 2) {
-			LOGGER.error("zipreader zipfile outputdir");
-			return;
-		}
 
 		// create a buffer to improve copy performance later.
-		byte[] buffer = new byte[2048];
+		byte[] buffer = new byte[4096];
 
-		Path outDir = Paths.get(args[1]);
+		Path outDir = Paths.get("C:\\Users\\rawan\\Desktop\\zip");
 
 		try (
 				// we open the zip file using a java 7 try with resources block so
 				// that we don't need a finally.
-				ZipInputStream stream = new ZipInputStream(new FileInputStream(args[0]))) {
-			LOGGER.info("Zip file: " + args[0] + " has been opened");
+
+				ZipInputStream stream = new ZipInputStream(
+						new FileInputStream("C:\\Users\\rawan\\Desktop\\file1.zip"))) {
+			LOGGER.info("Zip file: " + "file1.zip" + " has been opened");
 
 			// now iterate through each file in the zip archive. The get
 			// next entry call will return a ZipEntry for each file in
@@ -41,7 +39,6 @@ public class readZipFile {
 				String fileInfo = String.format("Entry: [%s] len %d added %TD", entry.getName(), entry.getSize(),
 						new Date(entry.getTime()));
 				LOGGER.info(fileInfo);
-
 				Path filePath = outDir.resolve(entry.getName());
 
 				// Now we can read the file data from the stream. We now

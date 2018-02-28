@@ -3,3 +3,23 @@
 2018-02-28 09:30:05 INFO  logfile:16 - jjj
 2018-02-28 09:30:27 INFO  logfile:16 - jjj
 2018-02-28 09:31:03 INFO  logfile:18 - jjj
+2018-02-28 11:59:31 ERROR ZipReader:20 - zipreader zipfile outputdir
+2018-02-28 12:06:40 INFO  ZipReader:30 - Zip file: file1.zip has been opened
+2018-02-28 12:06:41 INFO  ZipReader:40 - Entry: [file1.txt] len 24 added 12/30/17
+2018-02-28 12:07:09 INFO  ZipReader:30 - Zip file: file1.zip has been opened
+2018-02-28 12:07:09 INFO  ZipReader:40 - Entry: [file1.txt] len 24 added 12/30/17
+2018-02-28 12:07:17 INFO  ZipReader:30 - Zip file: file1.zip has been opened
+2018-02-28 12:07:17 INFO  ZipReader:40 - Entry: [file1.txt] len 24 added 12/30/17
+2018-02-28 12:07:17 INFO  ZipReader:48 - Writing file: D:file1.txt
+2018-02-28 12:16:31 INFO  ZipReader:30 - Zip file: file1.zip has been opened
+2018-02-28 12:16:31 INFO  ZipReader:40 - Entry: [file1.txt] len 24 added 12/30/17
+2018-02-28 12:16:31 INFO  ZipReader:47 - Writing file: D:file1.txt
+2018-02-28 12:20:01 INFO  ZipReader:31 - Zip file: file1.zip has been opened
+2018-02-28 12:20:01 INFO  ZipReader:41 - Entry: [file1.txt] len 24 added 12/30/17
+2018-02-28 12:20:01 INFO  ZipReader:48 - Writing file: D:file1.txt
+2018-02-28 12:20:22 INFO  ZipReader:31 - Zip file: file1.zip has been opened
+2018-02-28 12:20:22 INFO  ZipReader:41 - Entry: [file1.txt] len 24 added 12/30/17
+2018-02-28 12:20:22 INFO  ZipReader:48 - Writing file: C:\Users\rawan\Desktop\zip\file1.txt
+2018-02-28 12:20:46 INFO  ZipReader:31 - Zip file: file1.zip has been opened
+2018-02-28 12:20:46 INFO  ZipReader:41 - Entry: [file1.txt] len 24 added 12/30/17
+2018-02-28 12:20:46 INFO  ZipReader:48 - Writing file: C:\Users\rawan\Desktop\zip\file1.txt
