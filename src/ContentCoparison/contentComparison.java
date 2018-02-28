@@ -65,12 +65,12 @@ public class contentComparison {
 		return null;
 	}
 
-	public static void main(String args[]) throws IOException, FileNotFoundException {
-
-		FileInputStream in1 = new FileInputStream("D:/file1.txt");
-		FileInputStream in2 = new FileInputStream("D:/file2.txt");
-		contentComparison mm = new contentComparison(in1, in2);
-		System.out.println(mm.compare2files());
-	}
+//	public static void main(String args[]) throws IOException, FileNotFoundException {
+//	
+//		FileInputStream in1 = new FileInputStream("C:\\Users\\Eman\\Desktop\\file1.txt");
+//		FileInputStream in2 = new FileInputStream("C:\\Users\\Eman\\Desktop\\file2.txt");
+//		contentComparison mm = new contentComparison(in1, in2);
+//		System.out.println(mm.compare2files());
+//	}
 
 }
