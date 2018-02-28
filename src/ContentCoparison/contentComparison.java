@@ -1,7 +1,6 @@
 package ContentCoparison;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.MessageDigest;
@@ -65,12 +64,15 @@ public class contentComparison {
 		return null;
 	}
 
-//	public static void main(String args[]) throws IOException, FileNotFoundException {
-//	
-//		FileInputStream in1 = new FileInputStream("C:\\Users\\Eman\\Desktop\\file1.txt");
-//		FileInputStream in2 = new FileInputStream("C:\\Users\\Eman\\Desktop\\file2.txt");
-//		contentComparison mm = new contentComparison(in1, in2);
-//		System.out.println(mm.compare2files());
-//	}
+	// public static void main(String args[]) throws IOException,
+	// FileNotFoundException {
+	//
+	// FileInputStream in1 = new
+	// FileInputStream("C:\\Users\\Eman\\Desktop\\file1.txt");
+	// FileInputStream in2 = new
+	// FileInputStream("C:\\Users\\Eman\\Desktop\\file2.txt");
+	// contentComparison mm = new contentComparison(in1, in2);
+	// System.out.println(mm.compare2files());
+	// }
 
 }

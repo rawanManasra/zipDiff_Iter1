@@ -5,8 +5,7 @@ import java.util.Date;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-import org.apache.log4j.RollingFileAppender;
+
 public class logfile {
 	public final String username = System.getProperty("user.name");
 	public String opType;
@@ -22,12 +21,9 @@ public class logfile {
 	public String toString() {
 		return "time : " + timeStamp + ", user: " + username + " ,Operation: " + opType;
 	}
-	public static void main(String args[])
-	{
-		String opType="";
-		logfile myfile=new logfile(opType);
-	
 
-		
-	}
+	// public static void main(String args[]) {
+	// String opType = "";
+	// logfile myfile=new logfile(opType);
+	// }
 }
