@@ -46,12 +46,12 @@
 // btnNewButton.setForeground(new Color(0, 204, 51));
 // btnNewButton.setBackground(new Color(51, 153, 102));
 // btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 18));
-// // btnNewButton.addActionListener(new ActionListener() {
-//
-// // public void actionPerformed(ActionEvent e) {
-// // JOptionPane.showMessageDialog(null, "hii");
-// // }
-// // });
+////  btnNewButton.addActionListener(new ActionListener() {
+////
+//// public void actionPerformed(ActionEvent e) {
+////  JOptionPane.showMessageDialog(null, "hii");
+////  }
+////  });
 // btnNewButton.setBounds(26, 32, 272, 45);
 // frame.getContentPane().add(btnNewButton);
 // }

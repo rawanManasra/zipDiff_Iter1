@@ -1,40 +1,40 @@
 package ContentCoparison;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
-/* compare the content of 2 files*/
+/* compare the content of 2 inputStream files*/
 
-public class contentComparison {
+public class inputStreamContentComparison {
 
 	static MessageDigest sha256 = null;
-	public FileInputStream file1 = null;
-	public FileInputStream file2 = null;
+	public InputStream file1 = null;
+	public InputStream file2 = null;
 
 	/* calling for class constructor - must take 2 FileInputStream files as input */
-	public contentComparison(FileInputStream in1, FileInputStream in2) {
+	public inputStreamContentComparison(InputStream in1, InputStream in2) {
 		file1 = in1;
 		file2 = in2;
 	}
 
 	/* check if 2 input files have the same SHA2-256 digest on file contents */
-	public boolean compare2files() {
+	public boolean compare2files() throws IOException {
 		return hashFileStream(file1) == hashFileStream(file2);
 	}
 
 	/**
 	 * Computes a SHA2-256 digest on the file contents.
 	 * 
-	 * @param stream
+	 * @param file12
 	 *            The input stream to process
 	 * @return The SHA2-256 digest of the file contents encoded in Base64 encoding
 	 *         (not URL safe). Returns null if the hash digest fails.
 	 */
-	public String hashFileStream(InputStream stream) {
+
+	public static String hashFileStream(InputStream stream) {
 
 		if (sha256 == null) {
 			try {
@@ -63,16 +63,5 @@ public class contentComparison {
 		}
 		return null;
 	}
-
-	// public static void main(String args[]) throws IOException,
-	// FileNotFoundException {
-	//
-	// FileInputStream in1 = new
-	// FileInputStream("C:\\Users\\Eman\\Desktop\\file1.txt");
-	// FileInputStream in2 = new
-	// FileInputStream("C:\\Users\\Eman\\Desktop\\file2.txt");
-	// contentComparison mm = new contentComparison(in1, in2);
-	// System.out.println(mm.compare2files());
-	// }
 
 }
