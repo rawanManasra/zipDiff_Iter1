@@ -2,6 +2,6 @@
 <classpath>
 	<classpathentry excluding="resources/|resources/" kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/rawan/Desktop/log4j-1.2.15.jar/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Eman/Desktop/ComputerScience/project/GitHub11/eman/zipDiff_Iter1/src/log4j-1.2.15.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
