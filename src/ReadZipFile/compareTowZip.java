@@ -33,17 +33,42 @@ public class compareTowZip {
 	public void cmp() throws IOException {
 		ArrayList<ZipEntry> arr1 = new ArrayList<ZipEntry>(copyToArrayList(zip1));
 		ArrayList<ZipEntry> arr2 = new ArrayList<ZipEntry>(copyToArrayList(zip2));
-		System.out.println(arr1 + "     " + arr2);
-		findIdenticalFiles1(arr1, arr2);
-		System.out.println(arr1 + "     " + arr2);
+		// System.out.println(arr1 + " " + arr2);
+		findIdenticalFiles(arr1, arr2);
+		// System.out.println(arr1 + " " + arr2);
+		System.out.println("------------------------------");
 		findSameContentsNamesDifferentPaths(arr1, arr2);
-		System.out.println(arr1 + "     " + arr2);
+		// System.out.println(arr1 + " " + arr2);
+		System.out.println("------------------------------");
+
 		findSameContentPathDifferentNames(arr1, arr2);
-		System.out.println(arr1 + "     " + arr2);
+		// System.out.println(arr1 + " " + arr2);
+		System.out.println("------------------------------");
+
+		findSameContentDifferentNamesPaths(arr1, arr2);
+		System.out.println("------------------------------");
+
+		for (Iterator<ZipEntry> it1 = arr1.iterator(); it1.hasNext();) {
+			ZipEntry entry1 = it1.next();
+			if (!entry1.isDirectory()) {
+				System.out.println(
+						"file: " + metadataAndPathComparison.GetEntryName(entry1) + " is only in the first archive");
+			}
+
+		}
+		for (Iterator<ZipEntry> it2 = arr2.iterator(); it2.hasNext();) {
+			ZipEntry entry2 = it2.next();
+			if (!entry2.isDirectory()) {
+				System.out.println(
+						"file: " + metadataAndPathComparison.GetEntryName(entry2) + " is only in the first archive");
+			}
+
+		}
 
 	}
 
-	public void findSameContentNamesPaths(ArrayList<ZipEntry> arr1, ArrayList<ZipEntry> arr2) throws IOException {
+	public void findSameContentDifferentNamesPaths(ArrayList<ZipEntry> arr1, ArrayList<ZipEntry> arr2)
+			throws IOException {
 		for (Iterator<ZipEntry> it1 = arr1.iterator(); it1.hasNext();) {
 			ZipEntry entry1 = it1.next();
 			for (Iterator<ZipEntry> it2 = arr2.iterator(); it2.hasNext();) {
@@ -129,7 +154,7 @@ public class compareTowZip {
 		}
 	}
 
-	public void findIdenticalFiles1(ArrayList<ZipEntry> arr1, ArrayList<ZipEntry> arr2) throws IOException {
+	public void findIdenticalFiles(ArrayList<ZipEntry> arr1, ArrayList<ZipEntry> arr2) throws IOException {
 		for (Iterator<ZipEntry> it1 = arr1.iterator(); it1.hasNext();) {
 			ZipEntry entry1 = it1.next();
 			for (Iterator<ZipEntry> it2 = arr2.iterator(); it2.hasNext();) {
@@ -140,10 +165,6 @@ public class compareTowZip {
 				if (compare2streams.compare2files(stream1, stream2)) {
 					if (metadataAndPathComparison.metadataTest(entry1, entry2)) {
 						if (metadataAndPathComparison.pathTest(entry1, entry2, zip1, zip2)) {
-							System.out
-									.println("entry1 path  " + metadataAndPathComparison.GetRelativePath(zip1, entry1));
-							System.out
-									.println("entry2 path  " + metadataAndPathComparison.GetRelativePath(zip2, entry2));
 							System.out.println("Identical " + metadataAndPathComparison.GetEntryName(entry1) + " "
 									+ metadataAndPathComparison.GetEntryName(entry2));
 							it1.remove();
