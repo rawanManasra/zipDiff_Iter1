@@ -12,7 +12,6 @@ import ContentComparison.Module.inputStreamContentComparison;
 import ContentComparison.Module.metadataAndPathComparison;
 
 public class ZipDiffCreation {
-
 	public ZipFile zip1 = null;
 	public ZipFile zip2 = null;
 
@@ -21,7 +20,7 @@ public class ZipDiffCreation {
 		zip2 = z2;
 	}
 
-	public ArrayList<ZipEntry> copyToArrayList(ZipFile zip) {
+	public static ArrayList<ZipEntry> copyToArrayList(ZipFile zip) {
 		Enumeration<? extends ZipEntry> entries = zip.entries();
 		ArrayList<ZipEntry> arr = new ArrayList<ZipEntry>(zip.size());
 		while (entries.hasMoreElements()) {
