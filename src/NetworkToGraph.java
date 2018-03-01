@@ -27,7 +27,14 @@ public class NetworkToGraph {
 	public void createDb(ArrayList<ZipEntry> entries1, ArrayList<ZipEntry> entries2, ZipFile zip1, ZipFile zip2) {
 		clearDb();
 		graphDb = new GraphDatabaseFactory().newEmbeddedDatabase(new File(DB_PATH));
+		zipEntry = graphDb.index().forNodes("switchs");
+		registerShutdownHook(graphDb);
+		addEntriesToGraph(entries1, zip1);
+		addEntriesToGraph(entries2, zip2);
+		System.out.println(graphDb);
 		graphDb.shutdown();
+
+		// graphDb.shutdown();
 	}
 
 	private void clearDb() {
@@ -36,6 +43,14 @@ public class NetworkToGraph {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	private static void registerShutdownHook(final GraphDatabaseService graphDb) {
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+			public void run() {
+				graphDb.shutdown();
+			}
+		});
 	}
 
 	public void addEntriesToGraph(ArrayList<ZipEntry> entries, ZipFile zip) {
@@ -47,6 +62,7 @@ public class NetworkToGraph {
 				Node n = graphDb.createNode();
 				n.setProperty(FILE_NAME, metadataAndPathComparison.GetEntryName(tmp));
 				n.setProperty(FILE_PATH, metadataAndPathComparison.GetRelativePath(zip, tmp));
+				System.out.println(zipEntry);
 				zipEntry.add(n, FILE_NAME, metadataAndPathComparison.GetEntryName(tmp));
 				tx.success();
 			} finally {
