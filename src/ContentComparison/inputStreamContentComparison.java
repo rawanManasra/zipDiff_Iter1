@@ -11,17 +11,9 @@ import java.util.Base64;
 public class inputStreamContentComparison {
 
 	static MessageDigest sha256 = null;
-	public InputStream file1 = null;
-	public InputStream file2 = null;
-
-	/* calling for class constructor - must take 2 FileInputStream files as input */
-	public inputStreamContentComparison(InputStream in1, InputStream in2) {
-		file1 = in1;
-		file2 = in2;
-	}
 
 	/* check if 2 input files have the same SHA2-256 digest on file contents */
-	public boolean compare2files() throws IOException {
+	public Boolean compare2files(InputStream file1, InputStream file2) {
 		return hashFileStream(file1).equals(hashFileStream(file2));
 	}
 
