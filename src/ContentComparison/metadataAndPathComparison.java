@@ -1,7 +1,5 @@
 package ContentComparison;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -17,22 +15,19 @@ public class metadataAndPathComparison {
 	 * of the zip archive, false otherwise
 	 */
 	public static Boolean pathTest(ZipEntry entry1, ZipEntry entry2, ZipFile zip1, ZipFile zip2) {
-		// calculate the path to zip1
-		Path p11 = Paths.get(zip1.getName()).toAbsolutePath().getRoot();
-		// calculate the relative path from entry 1 to zip1
-		Path p12 = Paths.get(entry1.getName()).toAbsolutePath().relativize(p11);
-		// calculate the path to zip2
-		Path p21 = Paths.get(zip1.getName()).toAbsolutePath().getRoot();
-		// calculate the relative path from entry2 to zip2
-		Path p22 = Paths.get(entry1.getName()).toAbsolutePath().relativize(p21);
-		// equalization!
-		return (p12.equals(p22));
+		return GetRelativePath(zip1, entry1).equals(GetRelativePath(zip2, entry2));
 
 	}
 
 	public static String GetRelativePath(ZipFile zip, ZipEntry entry) {
-		Path p1 = Paths.get(entry.getName());
-		return p1.toString();
+		String[] names = entry.getName().split("/");
+		String path = "";
+		for (int i = 0; i < names.length - 1; i++) {
+			path += names[i];
+			path += "/";
+
+		}
+		return path;
 	}
 
 	public static String GetEntryName(ZipEntry entry) {
