@@ -1,4 +1,4 @@
-package zipDiff_iter1;
+package Helpers.Module;
 
 public interface OperationType {
 	public final String TURN_ON = "turn on";

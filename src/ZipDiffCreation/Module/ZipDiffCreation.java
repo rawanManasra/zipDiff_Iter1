@@ -1,4 +1,4 @@
-package ReadZipFile;
+package ZipDiffCreation.Module;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,14 +8,15 @@ import java.util.Iterator;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import ContentComparison.inputStreamContentComparison;
-import ContentComparison.metadataAndPathComparison;
+import ContentComparison.Module.inputStreamContentComparison;
+import ContentComparison.Module.metadataAndPathComparison;
 
-public class compareTowZip {
+public class ZipDiffCreation {
+
 	public ZipFile zip1 = null;
 	public ZipFile zip2 = null;
 
-	public compareTowZip(ZipFile z1, ZipFile z2) {
+	public ZipDiffCreation(ZipFile z1, ZipFile z2) {
 		zip1 = z1;
 		zip2 = z2;
 	}
@@ -177,20 +178,20 @@ public class compareTowZip {
 		}
 	}
 
-	public static void main(String args[]) throws IOException {
-		ZipFile zip1 = new ZipFile("C:\\Users\\rawan\\Desktop\\file2.zip");
-		ZipFile zip2 = new ZipFile("C:\\Users\\rawan\\Desktop\\file2copy.zip");
-		compareTowZip cmp2zip = new compareTowZip(zip1, zip2);
-		cmp2zip.cmp();
-		// Path p = Paths.get(zip1.getName()).toAbsolutePath().getRoot();
-		// final Enumeration<? extends ZipEntry> entries = zip1.entries();
-		// while (entries.hasMoreElements()) {
-		// final ZipEntry entry = entries.nextElement();w
-		// Path p2 = Paths.get(entry.getName()).toAbsolutePath().relativize(p);
-		// System.out.println(p2.toString());
-		// Path p3 = Paths.get(entry.getName());
-		// System.out.println(p3.toString());
-		// }
-	}
+	// public static void main(String args[]) throws IOException {
+	// ZipFile zip1 = new ZipFile("C:\\Users\\rawan\\Desktop\\file2.zip");
+	// ZipFile zip2 = new ZipFile("C:\\Users\\rawan\\Desktop\\file2copy.zip");
+	// ZipDiffCreation cmp2zip = new ZipDiffCreation(zip1, zip2);
+	// cmp2zip.cmp();
+	// Path p = Paths.get(zip1.getName()).toAbsolutePath().getRoot();
+	// final Enumeration<? extends ZipEntry> entries = zip1.entries();
+	// while (entries.hasMoreElements()) {
+	// final ZipEntry entry = entries.nextElement();w
+	// Path p2 = Paths.get(entry.getName()).toAbsolutePath().relativize(p);
+	// System.out.println(p2.toString());
+	// Path p3 = Paths.get(entry.getName());
+	// System.out.println(p3.toString());
+	// }
+	// }
 
 }
