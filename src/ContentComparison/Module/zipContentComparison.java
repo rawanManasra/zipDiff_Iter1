@@ -58,14 +58,14 @@ public class zipContentComparison {
 		return (count1 == 0 ? true : false);
 	}
 
-	public static void main(String args[]) throws IOException {
-		ZipFile zip1 = new ZipFile("D:\\zipCon.zip");
-		ZipFile zip2 = new ZipFile("D:\\zipConcopy.zip");
-		zipContentComparison comp = new zipContentComparison(zip1, zip2);
-		if (comp.compareTowZips())
-			System.out.println("identical");
-		else
-			System.out.println("not identical");
-
-	}
+	// public static void main(String args[]) throws IOException {
+	// ZipFile zip1 = new ZipFile("D:\\zipCon.zip");
+	// ZipFile zip2 = new ZipFile("D:\\zipConcopy.zip");
+	// zipContentComparison comp = new zipContentComparison(zip1, zip2);
+	// if (comp.compareTowZips())
+	// System.out.println("identical");
+	// else
+	// System.out.println("not identical");
+	//
+	// }
 }

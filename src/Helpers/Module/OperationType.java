@@ -7,5 +7,8 @@ public interface OperationType {
 	public final String DIFF_CREATION = "ExampleDB";
 	public final String PATCH_CREATION = "patch creation";
 	public final String PATCH_APPLICATION = "patch application";
-
+	public final String ADDITION = "add";
+	public final String REMOVAL = "remove";
+	public final String SKIP = "skip";
+	public final String INIT = "init";
 }
