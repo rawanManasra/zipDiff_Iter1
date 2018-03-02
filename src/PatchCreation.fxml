@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PatchCreationController">
+   <children>
+      <Label layoutX="23.0" layoutY="89.0" prefHeight="27.0" prefWidth="265.0" text="Select Zip Folders :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="CancelBtn" layoutX="469.0" layoutY="441.0" mnemonicParsing="false" onAction="#CancelBtnAction" prefHeight="45.0" prefWidth="82.0" text="Cancel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="OkBtn" disable="true" layoutX="350.0" layoutY="441.0" mnemonicParsing="false" onAction="#OkBtnAction" prefHeight="45.0" prefWidth="82.0" text="OK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="secondList" editable="false" layoutX="50.0" layoutY="348.0" prefHeight="45.0" prefWidth="400.0" promptText="..." />
+      <TextField fx:id="firstList" editable="false" layoutX="50.0" layoutY="207.0" prefHeight="45.0" prefWidth="400.0" promptText="..." />
+      <Label layoutX="23.0" layoutY="283.0" prefHeight="48.0" prefWidth="204.0" text="Second Folder :" textAlignment="CENTER" />
+      <Label layoutX="23.0" layoutY="138.0" prefHeight="48.0" prefWidth="153.0" text="First Folder :" textAlignment="CENTER" />
+      <Button fx:id="BrowseBtn2" layoutX="466.0" layoutY="349.0" mnemonicParsing="false" onAction="#BrowseBtn2Action" prefHeight="45.0" prefWidth="82.0" text="Browse">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="BrowseBtn1" layoutX="466.0" layoutY="208.0" mnemonicParsing="false" onAction="#BrowseBtn1Action" prefHeight="45.0" prefWidth="82.0" text="Browse">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="190.0" layoutY="29.0" prefHeight="35.0" prefWidth="171.0" text="Patch Creation">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
