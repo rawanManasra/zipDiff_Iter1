@@ -36,7 +36,6 @@ public class inputStreamContentComparison {
 				return null;
 			}
 		}
-
 		try {
 			// reset the digest state machine
 			sha256.reset();

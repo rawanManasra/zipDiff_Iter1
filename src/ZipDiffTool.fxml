@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.media.*?>
 <?import javafx.scene.control.*?>
@@ -9,8 +10,17 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ZipDiffToolController">
    <children>
-      <Button fx:id="ZipComparisonButton" layoutX="125.0" layoutY="98.0" mnemonicParsing="false" onAction="#ZipComparisonAct" prefHeight="50.0" prefWidth="300.0" text="Zip Comparison Module" />
-      <Button fx:id="DiffCreationBtn" layoutX="125.0" layoutY="197.0" mnemonicParsing="false" onAction="#DiffCreationAct" prefHeight="50.0" prefWidth="300.0" text="Diff Creation Module" />
-      <Button fx:id="PatchCreationBtn" layoutX="125.0" layoutY="303.0" mnemonicParsing="false" onAction="#PatchCreationAndApplicationAct" prefHeight="50.0" prefWidth="300.0" text="Patch Creation " />
+      <Button fx:id="ZipComparisonButton" layoutX="125.0" layoutY="98.0" mnemonicParsing="false" onAction="#ZipComparisonAct" prefHeight="77.0" prefWidth="321.0" text="Zip Comparison " textFill="#0c1790">
+         <font>
+            <Font size="36.0" />
+         </font></Button>
+      <Button fx:id="DiffCreationBtn" layoutX="125.0" layoutY="197.0" mnemonicParsing="false" onAction="#DiffCreationAct" prefHeight="77.0" prefWidth="321.0" text="Diff Creation " textFill="#0c1790">
+         <font>
+            <Font size="36.0" />
+         </font></Button>
+      <Button fx:id="PatchCreationBtn" layoutX="125.0" layoutY="303.0" mnemonicParsing="false" onAction="#PatchCreationAndApplicationAct" prefHeight="77.0" prefWidth="321.0" text="Patch Creation " textFill="#0c1790">
+         <font>
+            <Font size="36.0" />
+         </font></Button>
    </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
@@ -9,37 +10,36 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DiffCreationModuleController">
    <children>
-      <Label layoutX="23.0" layoutY="138.0" prefHeight="48.0" prefWidth="153.0" text="First Folder :" textAlignment="CENTER" />
-      <Label layoutX="23.0" layoutY="283.0" prefHeight="48.0" prefWidth="204.0" text="Second Folder :" textAlignment="CENTER" />
-      <Button fx:id="BrowseBtn1" layoutX="466.0" layoutY="207.0" mnemonicParsing="false" onAction="#BrowseBtn1Action" prefHeight="45.0" prefWidth="82.0" text="Browse">
+      <Button fx:id="BrowseBtn1" layoutX="466.0" layoutY="207.0" mnemonicParsing="false" onAction="#BrowseBtn1Action" prefHeight="45.0" prefWidth="82.0" text="Browse" textFill="#0c1790">
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button fx:id="BrowseBtn2" layoutX="466.0" layoutY="348.0" mnemonicParsing="false" onAction="#BrowseBtn2Action" prefHeight="45.0" prefWidth="82.0" text="Browse">
+      <Button fx:id="BrowseBtn2" layoutX="466.0" layoutY="348.0" mnemonicParsing="false" onAction="#BrowseBtn2Action" prefHeight="45.0" prefWidth="82.0" text="Browse" textFill="#0c1790">
          <font>
             <Font size="14.0" />
          </font></Button>
       <TextField fx:id="firstList" editable="false" layoutX="50.0" layoutY="207.0" prefHeight="45.0" prefWidth="400.0" promptText="..." />
       <TextField fx:id="secondList" editable="false" layoutX="50.0" layoutY="348.0" prefHeight="45.0" prefWidth="400.0" promptText="..." />
-      <Label layoutX="23.0" layoutY="89.0" prefHeight="48.0" prefWidth="350.0" text="Select ZIP Folders to Compare : " textAlignment="CENTER">
+      <Label layoutX="50.0" layoutY="124.0" prefHeight="48.0" prefWidth="350.0" text="Select ZIP Folders to Compare : " textAlignment="CENTER" textFill="#0c1790">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="OkBtn" disable="true" layoutX="347.0" layoutY="441.0" mnemonicParsing="false" onAction="#OkBtnAction" prefHeight="45.0" prefWidth="82.0" text="OK">
+      <Button fx:id="OkBtn" disable="true" layoutX="376.0" layoutY="441.0" mnemonicParsing="false" onAction="#OkBtnAction" prefHeight="45.0" prefWidth="82.0" text="OK" textFill="#0c1790">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="CancelBtn" layoutX="466.0" layoutY="441.0" mnemonicParsing="false" onAction="#CancelBtnAction" prefHeight="45.0" prefWidth="82.0" text="Cancel">
+      <Button fx:id="CancelBtn" layoutX="466.0" layoutY="441.0" mnemonicParsing="false" onAction="#CancelBtnAction" prefHeight="45.0" prefWidth="82.0" text="Cancel" textFill="#0c1790">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="147.0" layoutY="33.0" prefHeight="48.0" prefWidth="286.0" text="Diff Creation Module" textAlignment="CENTER">
+      <Label layoutX="147.0" layoutY="33.0" prefHeight="48.0" prefWidth="286.0" text="Diff Creation " textAlignment="CENTER" textFill="#0c1790">
          <font>
-            <Font size="24.0" />
+            <Font size="36.0" />
          </font>
       </Label>
+      <Label fx:id="label1" layoutX="14.0" layoutY="441.0" prefHeight="45.0" prefWidth="340.0" textFill="#3f84c4" />
    </children>
 </AnchorPane>

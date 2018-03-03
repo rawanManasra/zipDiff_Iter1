@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream;
 
 import ContentComparison.Module.inputStreamContentComparison;
 import ContentComparison.Module.metadataAndPathComparison;
-import Helpers.Module.OperationType;;
+import Helpers.Module.AppConstants;
 
 public class PatchCreation {
 	ArrayList<patchEntry> arr1;
@@ -22,7 +22,9 @@ public class PatchCreation {
 	ZipFile zip2;
 	String path;
 
-	public PatchCreation(ZipFile z1, ZipFile z2, String p) throws IOException {
+	public PatchCreation(String name1, String name2, String p) throws IOException {
+		ZipFile z1 = new ZipFile(name1);
+		ZipFile z2 = new ZipFile(name2);
 		this.arr1 = arrayListPatchCreation(z1);
 		this.arr2 = arrayListPatchCreation(z2);
 		zip1 = z1;
@@ -30,8 +32,7 @@ public class PatchCreation {
 		if (p != null && p != "")
 			path = p;
 		else
-			path = "D:";
-
+			path = AppConstants.DEFAULT_PATH;
 		EnterOperationTypes();
 		compressPatchFile();
 	}
@@ -41,7 +42,7 @@ public class PatchCreation {
 		ArrayList<patchEntry> arr = new ArrayList<patchEntry>();
 		while (entries.hasMoreElements()) {
 			ZipEntry entry = entries.nextElement();
-			patchEntry pentry = new patchEntry(entry, OperationType.INIT);
+			patchEntry pentry = new patchEntry(entry, AppConstants.INIT);
 			arr.add(pentry);
 		}
 		return arr;
@@ -60,8 +61,8 @@ public class PatchCreation {
 				if (compare2streams.compare2files(stream1, stream2)) {
 					if (metadataAndPathComparison.metadataTest(entry1.getEntry(), entry2.getEntry())) {
 						if (metadataAndPathComparison.pathTest(entry1.getEntry(), entry2.getEntry(), zip1, zip2)) {
-							entry1.setOpType(OperationType.SKIP);
-							entry2.setOpType(OperationType.SKIP);
+							entry1.setOpType(AppConstants.SKIP);
+							entry2.setOpType(AppConstants.SKIP);
 						}
 					}
 				}
@@ -72,53 +73,41 @@ public class PatchCreation {
 
 	public void compressPatchFile() throws IOException {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Archive 1:");
-		sb.append(System.getProperty("line.separator"));
+		sb.append(AppConstants.FIRST_ARCHIVE);
+		sb.append(System.getProperty(AppConstants.NEW_LINE));
 		for (Iterator<patchEntry> it1 = arr1.iterator(); it1.hasNext();) {
 			patchEntry entry1 = it1.next();
-			if (entry1.getOpType().equals(OperationType.SKIP))
+			if (entry1.getOpType().equals(AppConstants.SKIP))
 				continue;
-			else if (entry1.getOpType().equals(OperationType.INIT)) {
-				entry1.setOpType(OperationType.REMOVAL);
+			else if (entry1.getOpType().equals(AppConstants.INIT)) {
+				entry1.setOpType(AppConstants.REMOVAL);
 				sb.append(entry1.getEntry().getName());
-				sb.append(System.getProperty("line.separator"));
+				sb.append(System.getProperty(AppConstants.NEW_LINE));
 
 			}
 		}
-		sb.append("Archive 2:");
-		sb.append(System.getProperty("line.separator"));
+		sb.append(AppConstants.SOCEND_ARCHIVE);
+		sb.append(System.getProperty(AppConstants.NEW_LINE));
 		for (Iterator<patchEntry> it2 = arr2.iterator(); it2.hasNext();) {
 			patchEntry entry2 = it2.next();
-			if (entry2.getOpType().equals(OperationType.SKIP))
+			if (entry2.getOpType().equals(AppConstants.SKIP))
 				continue;
-			else if (entry2.getOpType().equals(OperationType.INIT)) {
-				entry2.setOpType(OperationType.ADDITION);
+			else if (entry2.getOpType().equals(AppConstants.INIT)) {
+				entry2.setOpType(AppConstants.ADDITION);
 				sb.append(entry2.getEntry().getName());
-				sb.append(System.getProperty("line.separator"));
+				sb.append(System.getProperty(AppConstants.NEW_LINE));
 
 			}
 		}
-		File f = new File(path + "\\Delta.zip");
-		ZipOutputStream out = new ZipOutputStream(new FileOutputStream(f));
-		ZipEntry e = new ZipEntry("delta.txt");
-		out.putNextEntry(e);
+		File DeltaZip = new File(path + "\\Delta_from_" + metadataAndPathComparison.GetZipFileName(zip1) + "_to_"
+				+ metadataAndPathComparison.GetZipFileName(zip2) + ".zip");
+		ZipOutputStream out = new ZipOutputStream(new FileOutputStream(DeltaZip));
+		ZipEntry deltaFile = new ZipEntry(AppConstants.DELTA_FILE_NAME);
+		out.putNextEntry(deltaFile);
 		byte[] data = sb.toString().getBytes();
 		out.write(data, 0, data.length);
 		out.closeEntry();
 		out.close();
 	}
-	// ArrayList<patchEntry> array = new ArrayList<patchEntry>();
 
-	public static void main(String args[]) throws IOException {
-		ZipFile zip1 = new ZipFile("D:\\zipCon.zip");
-		ZipFile zip2 = new ZipFile("D:\\zipConcopy.zip");
-		PatchCreation pc = new PatchCreation(zip1, zip2, "");
-		pc.EnterOperationTypes();
-		System.out.println(pc.arr1);
-		System.out.println(pc.arr2);
-		System.out.println(zip1.getName());
-		// pc.compressPatch();
-		// PatchCreation arr = new PatchCreation();
-		// System.out.println(arr.arrayListPatchCreation(zip1));
-	}
 }

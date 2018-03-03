@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -8,39 +9,41 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ZipComparisonController">
    <children>
-      <Button fx:id="BrowseBtn1" layoutX="476.0" layoutY="212.0" mnemonicParsing="false" onAction="#BrowseBtn1Action" prefHeight="45.0" prefWidth="82.0" text="Browse">
+      <Button fx:id="BrowseBtn1" layoutX="476.0" layoutY="212.0" mnemonicParsing="false" onAction="#BrowseBtn1Action" prefHeight="45.0" prefWidth="82.0" text="Browse" textAlignment="CENTER" textFill="#0c1790" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="BrowseBtn2" layoutX="476.0" layoutY="353.0" mnemonicParsing="false" onAction="#BrowseBtn2Action" prefHeight="45.0" prefWidth="82.0" text="Browse">
+      <Button fx:id="BrowseBtn2" layoutX="476.0" layoutY="353.0" mnemonicParsing="false" onAction="#BrowseBtn2Action" prefHeight="45.0" prefWidth="82.0" text="Browse" textFill="#0c1790">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="33.0" layoutY="142.0" prefHeight="48.0" prefWidth="153.0" text="First Folder :" textAlignment="CENTER" />
-      <Label layoutX="33.0" layoutY="287.0" prefHeight="48.0" prefWidth="204.0" text="Second Folder :" textAlignment="CENTER" />
       <TextField fx:id="firstList" editable="false" layoutX="60.0" layoutY="211.0" prefHeight="45.0" prefWidth="400.0" promptText="..." />
       <TextField fx:id="secondList" editable="false" layoutX="60.0" layoutY="352.0" prefHeight="45.0" prefWidth="400.0" promptText="..." />
-      <Button fx:id="OkBtn" disable="true" layoutX="360.0" layoutY="445.0" mnemonicParsing="false" onAction="#OkBtnAction" prefHeight="45.0" prefWidth="82.0" text="OK">
+      <Button fx:id="OkBtn" disable="true" layoutX="360.0" layoutY="445.0" mnemonicParsing="false" onAction="#OkBtnAction" prefHeight="45.0" prefWidth="82.0" text="OK" textFill="#0c1790">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="CancelBtn" layoutX="479.0" layoutY="445.0" mnemonicParsing="false" onAction="#CancelBtnAction" prefHeight="45.0" prefWidth="82.0" text="Cancel">
+      <Button fx:id="CancelBtn" layoutX="479.0" layoutY="445.0" mnemonicParsing="false" onAction="#CancelBtnAction" prefHeight="45.0" prefWidth="82.0" text="Cancel" textFill="#0c1790">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="33.0" layoutY="93.0" prefHeight="27.0" prefWidth="265.0" text="Select Zip Folders :">
+      <Label layoutX="60.0" layoutY="130.0" prefHeight="27.0" prefWidth="265.0" text="Select 2 Zip Archives:" textFill="#0c1790">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="181.0" layoutY="36.0" prefHeight="27.0" prefWidth="265.0" text="Zip Comparison">
+      <Label layoutX="181.0" layoutY="36.0" prefHeight="27.0" prefWidth="265.0" text="Zip Comparison" textFill="#0c1790">
          <font>
-            <Font size="24.0" />
+            <Font size="34.0" />
          </font>
       </Label>
+      <Label fx:id="Answer" layoutX="100.0" layoutY="450.0" prefHeight="27.0" prefWidth="227.0" textAlignment="CENTER" textFill="#2c7f9ad4">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
    </children>
 </AnchorPane>

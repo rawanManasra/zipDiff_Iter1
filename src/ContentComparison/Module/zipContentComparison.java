@@ -9,15 +9,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class zipContentComparison {
-	public ZipFile zip1;
-	public ZipFile zip2;
 
-	public zipContentComparison(ZipFile z1, ZipFile z2) {
-		zip1 = z1;
-		zip2 = z2;
-	}
-
-	public ArrayList<ZipEntry> copyToArrayList(ZipFile zip) {
+	public static ArrayList<ZipEntry> copyToArrayList(ZipFile zip) {
 		Enumeration<? extends ZipEntry> entries = zip.entries();
 		ArrayList<ZipEntry> arr = new ArrayList<ZipEntry>(zip.size());
 		while (entries.hasMoreElements()) {
@@ -27,7 +20,7 @@ public class zipContentComparison {
 		return arr;
 	}
 
-	public Boolean compareTowZips() throws IOException {
+	public static Boolean zipComparison(ZipFile zip1, ZipFile zip2) throws IOException {
 
 		ArrayList<ZipEntry> arr1 = new ArrayList<ZipEntry>(copyToArrayList(zip1));
 		ArrayList<ZipEntry> arr2 = new ArrayList<ZipEntry>(copyToArrayList(zip2));
@@ -58,14 +51,9 @@ public class zipContentComparison {
 		return (count1 == 0 ? true : false);
 	}
 
-	// public static void main(String args[]) throws IOException {
-	// ZipFile zip1 = new ZipFile("D:\\zipCon.zip");
-	// ZipFile zip2 = new ZipFile("D:\\zipConcopy.zip");
-	// zipContentComparison comp = new zipContentComparison(zip1, zip2);
-	// if (comp.compareTowZips())
-	// System.out.println("identical");
-	// else
-	// System.out.println("not identical");
-	//
-	// }
+	public static Boolean ZipComparison(String name1, String name2) throws IOException {
+		ZipFile zip1 = new ZipFile(name1);
+		ZipFile zip2 = new ZipFile(name2);
+		return zipComparison(zip1, zip2);
+	}
 }

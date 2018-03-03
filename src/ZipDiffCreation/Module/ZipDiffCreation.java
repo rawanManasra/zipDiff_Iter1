@@ -15,7 +15,9 @@ public class ZipDiffCreation {
 	public ZipFile zip1 = null;
 	public ZipFile zip2 = null;
 
-	public ZipDiffCreation(ZipFile z1, ZipFile z2) {
+	public ZipDiffCreation(String name1, String name2) throws IOException {
+		ZipFile z1 = new ZipFile(name1);
+		ZipFile z2 = new ZipFile(name2);
 		zip1 = z1;
 		zip2 = z2;
 	}
@@ -60,7 +62,7 @@ public class ZipDiffCreation {
 			ZipEntry entry2 = it2.next();
 			if (!entry2.isDirectory()) {
 				System.out.println(
-						"file: " + metadataAndPathComparison.GetEntryName(entry2) + " is only in the first archive");
+						"file: " + metadataAndPathComparison.GetEntryName(entry2) + " is only in the second archive");
 			}
 
 		}
@@ -176,21 +178,4 @@ public class ZipDiffCreation {
 			}
 		}
 	}
-
-	// public static void main(String args[]) throws IOException {
-	// ZipFile zip1 = new ZipFile("C:\\Users\\rawan\\Desktop\\file2.zip");
-	// ZipFile zip2 = new ZipFile("C:\\Users\\rawan\\Desktop\\file2copy.zip");
-	// ZipDiffCreation cmp2zip = new ZipDiffCreation(zip1, zip2);
-	// cmp2zip.cmp();
-	// Path p = Paths.get(zip1.getName()).toAbsolutePath().getRoot();
-	// final Enumeration<? extends ZipEntry> entries = zip1.entries();
-	// while (entries.hasMoreElements()) {
-	// final ZipEntry entry = entries.nextElement();w
-	// Path p2 = Paths.get(entry.getName()).toAbsolutePath().relativize(p);
-	// System.out.println(p2.toString());
-	// Path p3 = Paths.get(entry.getName());
-	// System.out.println(p3.toString());
-	// }
-	// }
-
 }

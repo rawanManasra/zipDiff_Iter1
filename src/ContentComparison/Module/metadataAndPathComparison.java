@@ -31,8 +31,17 @@ public class metadataAndPathComparison {
 	}
 
 	public static String GetEntryName(ZipEntry entry) {
-		String[] names = entry.getName().split("/");
+		String[] names = entry.getName().split("\\\\");
 		return (names[names.length - 1]);
+	}
+
+	public static String GetZipFileName(ZipFile zip) {
+		String[] names = zip.getName().split("\\\\");
+		String[] name = names[names.length - 1].split("\\.");
+		if (!name[1].equals("zip"))
+			return "";
+		return name[0];
+
 	}
 
 }
