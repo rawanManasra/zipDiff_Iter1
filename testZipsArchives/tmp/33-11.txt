@@ -1,0 +1,10 @@
+Identical 2.txt 2.txt
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+file: 1.txt is only in the first archive
+file: 1.zip is only in the first archive
+file: 2.zip is only in the first archive
+file: 3.txt is only in the second archive
+file: 4.txt is only in the second archive

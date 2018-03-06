@@ -1,0 +1,20 @@
+Identical 2.txt 2.txt
+Identical 3.txt 3.txt
+Identical 4.txt 4.txt
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+file: 10.txt is only in the first archive
+file: 11.txt is only in the first archive
+file: 12.txt is only in the first archive
+file: 123.txt is only in the first archive
+file: 13.txt is only in the first archive
+file: 14.txt is only in the first archive
+file: 15.txt is only in the first archive
+file: 16.txt is only in the first archive
+file: 5.txt is only in the first archive
+file: 6.txt is only in the first archive
+file: 7.txt is only in the first archive
+file: 8.txt is only in the first archive
+file: 9.txt is only in the first archive

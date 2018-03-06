@@ -1,0 +1,24 @@
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+file: 10.txt is only in the first archive
+file: 11.txt is only in the first archive
+file: 12.txt is only in the first archive
+file: 3/10.txt is only in the first archive
+file: 3/11.txt is only in the first archive
+file: 3/12.txt is only in the first archive
+file: 3/13.txt is only in the first archive
+file: 3/7.txt is only in the first archive
+file: 3/8.txt is only in the first archive
+file: 3/9.txt is only in the first archive
+file: 5/10.txt is only in the first archive
+file: 5/11.txt is only in the first archive
+file: 5/8.txt is only in the first archive
+file: 5/9.txt is only in the first archive
+file: 8.txt is only in the first archive
+file: 9.txt is only in the first archive
+file: 1.txt is only in the second archive
+file: 1.zip is only in the second archive
+file: 2.txt is only in the second archive
+file: 2.zip is only in the second archive

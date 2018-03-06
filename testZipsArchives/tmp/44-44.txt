@@ -1,0 +1,28 @@
+Identical 1.txt 1.txt
+Identical 1.zip 1.zip
+Identical 2.txt 2.txt
+Identical 2/10.txt 2/10.txt
+Identical 2/11.txt 2/11.txt
+Identical 2/12.txt 2/12.txt
+Identical 2/8.txt 2/8.txt
+Identical 2/9.txt 2/9.txt
+Identical 3/10.txt 3/10.txt
+Identical 3/11.txt 3/11.txt
+Identical 3/12.txt 3/12.txt
+Identical 3/13.txt 3/13.txt
+Identical 3/7.txt 3/7.txt
+Identical 3/8.txt 3/8.txt
+Identical 3/9.txt 3/9.txt
+Identical 4/4.txt 4/4.txt
+Identical 4/5.txt 4/5.txt
+Identical 4/6.txt 4/6.txt
+Identical 4/7.txt 4/7.txt
+Identical 4/8.txt 4/8.txt
+Identical 5/10.txt 5/10.txt
+Identical 5/11.txt 5/11.txt
+Identical 5/8.txt 5/8.txt
+Identical 5/9.txt 5/9.txt
+------------------------------
+------------------------------
+------------------------------
+------------------------------

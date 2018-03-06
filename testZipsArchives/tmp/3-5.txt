@@ -1,0 +1,15 @@
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+file: 1.txt is only in the first archive
+file: 1.zip is only in the first archive
+file: 2.txt is only in the first archive
+file: 2.zip is only in the first archive
+file: 10.txt is only in the second archive
+file: 11.txt is only in the second archive
+file: 12.txt is only in the second archive
+file: 13.txt is only in the second archive
+file: 14.txt is only in the second archive
+file: 8.txt is only in the second archive
+file: 9.txt is only in the second archive

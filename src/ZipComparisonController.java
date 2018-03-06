@@ -1,7 +1,8 @@
 import java.io.File;
 import java.io.IOException;
 
-import ContentComparison.Module.zipContentComparison;
+import Helpers.Module.AppConstants;
+import Helpers.Module.logfile;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
+import zipComparison.module.zipContentComparison;
 import javafx.stage.Stage;
 
 public class ZipComparisonController {
@@ -88,6 +90,7 @@ public class ZipComparisonController {
 
 	@FXML
 	void OkBtnAction(ActionEvent event) throws IOException {
+		logfile log = new logfile(AppConstants.DIFF_CREATION + ": " + firstList.getText() + " " + secondList.getText());
 		if (zipContentComparison.ZipComparison(firstList.getText(), secondList.getText())) {
 			Answer.setText("Identical Archives");
 		} else {

@@ -16,12 +16,13 @@ import java.util.zip.ZipOutputStream;
 
 import org.apache.commons.io.IOUtils;
 
-import ContentComparison.Module.metadataAndPathComparison;
-import ContentComparison.Module.zipContentComparison;
 import Helpers.Module.AppConstants;
+import zipComparison.module.metadataAndPathComparison;
+import zipComparison.module.zipContentComparison;
 
 public class patchApplication extends PatchCreation {
 	public ZipFile zip3;
+	zipContentComparison cmp = new zipContentComparison();
 
 	public patchApplication(String name1, String name2, String p, String name3) throws IOException {
 		super(name1, name2, p);
@@ -89,7 +90,9 @@ public class patchApplication extends PatchCreation {
 	}
 
 	public Boolean ApplyPatch() throws IOException {
+
 		if (!zipContentComparison.zipComparison(zip3, zip1)) {
+
 			System.out.println("the to archives must be content metadata path identical.");
 			return false;
 		}
@@ -105,7 +108,6 @@ public class patchApplication extends PatchCreation {
 			zos.putNextEntry(entry);
 
 			BufferedInputStream bis = new BufferedInputStream(zip2.getInputStream(entry));
-
 			while (bis.available() > 0) {
 				zos.write(bis.read());
 			}

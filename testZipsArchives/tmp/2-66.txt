@@ -1,0 +1,39 @@
+Identical 10.txt 10.txt
+Identical 11.txt 11.txt
+Identical 12.txt 12.txt
+Identical 8.txt 8.txt
+Identical 9.txt 9.txt
+------------------------------
+------------------------------
+------------------------------
+Different Names:
+file 1 name: 13.txt
+file 2 name: 3/13.txt
+Different Paths:
+file 1 path: 
+file 2 path: 3/
+Different Names:
+file 1 name: 7.txt
+file 2 name: 3/7.txt
+Different Paths:
+file 1 path: 
+file 2 path: 3/
+------------------------------
+file: 123.txt is only in the first archive
+file: 14.txt is only in the first archive
+file: 15.txt is only in the first archive
+file: 16.txt is only in the first archive
+file: 2.txt is only in the first archive
+file: 3.txt is only in the first archive
+file: 4.txt is only in the first archive
+file: 5.txt is only in the first archive
+file: 6.txt is only in the first archive
+file: 3/10.txt is only in the second archive
+file: 3/11.txt is only in the second archive
+file: 3/12.txt is only in the second archive
+file: 3/8.txt is only in the second archive
+file: 3/9.txt is only in the second archive
+file: 5/10.txt is only in the second archive
+file: 5/11.txt is only in the second archive
+file: 5/8.txt is only in the second archive
+file: 5/9.txt is only in the second archive

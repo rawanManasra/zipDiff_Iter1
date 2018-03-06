@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.IOException;
 
+import Helpers.Module.AppConstants;
+import Helpers.Module.logfile;
 import ZipDiffCreation.Module.ZipDiffCreation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -78,6 +80,8 @@ public class DiffCreationModuleController {
 	}
 
 	public void OkBtnAction(ActionEvent event) throws IOException {
+		logfile log = new logfile(AppConstants.DIFF_CREATION + ": " + firstList.getText() + " " + secondList.getText());
+
 		ZipDiffCreation zdiff = new ZipDiffCreation(firstList.getText(), secondList.getText());
 		zdiff.cmp();
 		label1.setText("The differnce between the 2 archives is on console (meanwhile)");

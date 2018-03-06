@@ -10,20 +10,11 @@ public class logfile {
 	public final String username = System.getProperty("user.name");
 	public String opType;
 	final static Logger logger = Logger.getLogger(logfile.class);
-	public final String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+	public final String timeStamp = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss").format(new Date());
 
 	public logfile(String string) {
 		opType = string;
 		BasicConfigurator.configure();
-		logger.info("jjj");
+		logger.info("time : " + timeStamp + ", user: " + username + " ,Operation: " + opType);
 	}
-
-	public String toString() {
-		return "time : " + timeStamp + ", user: " + username + " ,Operation: " + opType;
-	}
-
-	// public static void main(String args[]) {
-	// String opType = "";
-	// logfile myfile=new logfile(opType);
-	// }
 }

@@ -1,0 +1,20 @@
+Identical 10.txt 10.txt
+Identical 11.txt 11.txt
+Identical 12.txt 12.txt
+Identical 3/10.txt 3/10.txt
+Identical 3/11.txt 3/11.txt
+Identical 3/12.txt 3/12.txt
+Identical 3/13.txt 3/13.txt
+Identical 3/7.txt 3/7.txt
+Identical 3/8.txt 3/8.txt
+Identical 3/9.txt 3/9.txt
+Identical 5/10.txt 5/10.txt
+Identical 5/11.txt 5/11.txt
+Identical 5/8.txt 5/8.txt
+Identical 5/9.txt 5/9.txt
+Identical 8.txt 8.txt
+Identical 9.txt 9.txt
+------------------------------
+------------------------------
+------------------------------
+------------------------------

@@ -1,0 +1,29 @@
+Identical 1.txt 1.txt
+Identical 1.zip 1.zip
+Identical 2.txt 2.txt
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+file: 2.zip is only in the first archive
+file: 2/10.txt is only in the second archive
+file: 2/11.txt is only in the second archive
+file: 2/12.txt is only in the second archive
+file: 2/8.txt is only in the second archive
+file: 2/9.txt is only in the second archive
+file: 3/10.txt is only in the second archive
+file: 3/11.txt is only in the second archive
+file: 3/12.txt is only in the second archive
+file: 3/13.txt is only in the second archive
+file: 3/7.txt is only in the second archive
+file: 3/8.txt is only in the second archive
+file: 3/9.txt is only in the second archive
+file: 4/4.txt is only in the second archive
+file: 4/5.txt is only in the second archive
+file: 4/6.txt is only in the second archive
+file: 4/7.txt is only in the second archive
+file: 4/8.txt is only in the second archive
+file: 5/10.txt is only in the second archive
+file: 5/11.txt is only in the second archive
+file: 5/8.txt is only in the second archive
+file: 5/9.txt is only in the second archive

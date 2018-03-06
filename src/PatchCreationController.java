@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.IOException;
 
 import Helpers.Module.AppConstants;
+import Helpers.Module.logfile;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -62,7 +63,10 @@ public class PatchCreationController {
 		if (pathlist == null) {
 			pathlist.setText(AppConstants.DEFAULT_PATH);
 		}
+		logfile log = new logfile(
+				AppConstants.PATCH_CREATION + ": " + firstList.getText() + " " + secondList.getText());
 		PatchCreation pc = new PatchCreation(firstList.getText(), secondList.getText(), pathlist.getText());
+		pc.CreatePatch();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("PatchApplication.fxml"));
 		Parent root = (Parent) loader.load();
 		PatchApplicationController app = loader.getController();
