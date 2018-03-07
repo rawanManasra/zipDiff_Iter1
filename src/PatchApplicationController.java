@@ -41,7 +41,7 @@ public class PatchApplicationController implements Initializable {
 	void OkBtnAction(ActionEvent event) throws IOException {
 		patchApplication pa = new patchApplication(name1, name2, path, firstList.getText());
 		logfile log = new logfile(AppConstants.PATCH_APPLICATION + ": " + firstList.getText());
-		pa.ApplyPatch();
+		System.out.println(firstList.getText());
 		if (pa.ApplyPatch())
 			label1.setText("Patch applicaton was performed");
 		else

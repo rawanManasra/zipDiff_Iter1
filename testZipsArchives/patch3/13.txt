@@ -1,0 +1,14 @@
+zip comparison : 
+
+1: 
+2: 
+3: 
+
+
+
+The IR process:
+1.	We start with the user that has an information need. The goal of the user is to download a version of Mac OS X (for example), he writes it as a query for a search engine.
+2.	The query goes to the search engine with a DB, and the search engine gets the results, scores and ranks them according to what’s more relevant and what’s less.
+3.	We return results to the user ranked and sorted according to relevance. Dwell time, mouse movements give the backend feedback on how well their information they retrieved is.
+4.	The user accesses the 
+All this should happen in a sub second.

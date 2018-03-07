@@ -1,0 +1,18 @@
+zip comparison : 
+
+1: 
+2: 
+3: 
+
+
+
+The IR process:
+1.	We start with the user that has an information need. The goal of the user is to download a version of Mac OS X (for example), he writes it as a query for a search engine.
+2.	The query goes to the search engine with a DB, and the search engine gets the results, scores and ranks them according to what’s more relevant and what’s less.
+3.	We return results to the user ranked and sorted according to relevance. Dwell time, mouse movements give the backend feedback on how well their information they retrieved is.
+4.	The user accesses the information.
+All this should happen in a sub second.
+Lecture 1:
+Information retrieval (IR) is the activity of obtaining information resources relevant to an information need from a collection of information resources. Searches can be based on full-text or other content-based indexing. Information retrieval is the science of searching for information in a document, searching for documents themselves, and also searching for metadata that describe data, and for databases of texts, images or sounds. (Wikipedia)
+What the system should be able to tell us is, given a query, IR should be able to tell us what the relevant information is, or if it does or does not exists.
+IR is focused mainly on text and queries that are entered by the user.
