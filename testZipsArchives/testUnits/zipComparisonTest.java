@@ -29,7 +29,6 @@ class zipComparisonTest {
 				"Zip Comparison Failed : the 2 archives are identical");
 		assertTrue(zipContentComparison.zipComparison(rz.zip7, rz.zip77),
 				"Zip Comparison Failed : the 2 archives are identical");
-
 		/* testing not identical archives */
 		assertFalse(zipContentComparison.zipComparison(rz.zip1, rz.zip2));
 		assertFalse(zipContentComparison.zipComparison(rz.zip1, rz.zip3));
