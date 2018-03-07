@@ -60,7 +60,7 @@ public class PatchApplicationController implements Initializable {
 	@FXML
 	void BrowseBtn1Action(ActionEvent event) throws IOException {
 		FileChooser fc = new FileChooser();
-		fc.setInitialDirectory(new File("D:\\"));
+		fc.setInitialDirectory(new File("C:\\"));
 		fc.getExtensionFilters().addAll(new ExtensionFilter("ZIP Files", "*.zip"));
 		File selectedFile = fc.showOpenDialog(null);
 		if (selectedFile != null) {

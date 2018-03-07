@@ -83,7 +83,7 @@ public class PatchCreationController {
 	@FXML
 	void BrowseBtn1Action(ActionEvent event) throws IOException {
 		FileChooser fc = new FileChooser();
-		fc.setInitialDirectory(new File("D:\\"));
+		fc.setInitialDirectory(new File("C:\\"));
 		fc.getExtensionFilters().addAll(new ExtensionFilter("ZIP Files", "*.zip"));
 		File selectedFile = fc.showOpenDialog(null);
 		if (selectedFile != null) {
@@ -102,7 +102,7 @@ public class PatchCreationController {
 	@FXML
 	void BrowseBtn2Action(ActionEvent event) throws IOException {
 		FileChooser fc = new FileChooser();
-		fc.setInitialDirectory(new File("D:\\"));
+		fc.setInitialDirectory(new File("C:\\"));
 		fc.getExtensionFilters().addAll(new ExtensionFilter("ZIP Files", "*.zip"));
 		File selectedFile1 = fc.showOpenDialog(null);
 		if (selectedFile1 != null) {
@@ -117,7 +117,7 @@ public class PatchCreationController {
 	@FXML
 	void BrowseBtn3Action(ActionEvent event) throws IOException {
 		DirectoryChooser chooser = new DirectoryChooser();
-		chooser.setInitialDirectory(new File("D:\\"));
+		chooser.setInitialDirectory(new File("C:\\"));
 		File selectedDir = chooser.showDialog(null);
 
 		if (selectedDir != null) {

@@ -26,7 +26,7 @@ import zipComparison.module.metadataAndPathComparison;
 import zipComparison.module.zipContentComparison;
 
 public class patchApplication extends PatchCreation {
-	static String path = "C:\\Users\\rawan\\Desktop\\zipz";
+	static String path = "C:\\Users\\EMAN\\Desktop\\zipz";
 
 	public ZipFile zip3;
 	public String zip3Name;
@@ -65,14 +65,6 @@ public class patchApplication extends PatchCreation {
 		DeltaZip.close();
 		String[] ops = delta.split(System.getProperty(AppConstants.NEW_LINE));
 		return ops;
-	}
-
-	public String CopyZipEntryContent(ZipEntry entry, ZipFile zip) throws IOException {
-		InputStream stream = zip.getInputStream(entry);
-		StringWriter writer = new StringWriter();
-		IOUtils.copy(stream, writer, StandardCharsets.UTF_8);
-		String content = writer.toString();
-		return content;
 	}
 
 	public void findEntriesWeNeed(String[] names, HashMap<String, String> firstArchiveFilesNames,
@@ -187,10 +179,6 @@ public class patchApplication extends PatchCreation {
 		zip2.close();
 	}
 
-	public Boolean DeleteFile(File name) throws IOException {
-		FileUtils.deleteDirectory(name);
-		return false;
-	}
 
 	public void unzip(String name) throws IOException {
 		byte[] buffer = new byte[4096];

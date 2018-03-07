@@ -55,7 +55,7 @@ public class ZipComparisonController {
 	@FXML
 	void BrowseBtn1Action(ActionEvent event) throws IOException {
 		FileChooser fc = new FileChooser();
-		fc.setInitialDirectory(new File("D:\\"));
+		fc.setInitialDirectory(new File("C:\\"));
 		fc.getExtensionFilters().addAll(new ExtensionFilter("ZIP Files", "*.zip"));
 		File selectedFile = fc.showOpenDialog(null);
 		// System.out.println(selectedFile.getName());
@@ -74,7 +74,7 @@ public class ZipComparisonController {
 	@FXML
 	void BrowseBtn2Action(ActionEvent event) throws IOException {
 		FileChooser fc = new FileChooser();
-		fc.setInitialDirectory(new File("D:\\"));
+		fc.setInitialDirectory(new File("C:\\"));
 		fc.getExtensionFilters().addAll(new ExtensionFilter("ZIP Files", "*.zip"));
 		File selectedFile1 = fc.showOpenDialog(null);
 		if (selectedFile1 != null) {
